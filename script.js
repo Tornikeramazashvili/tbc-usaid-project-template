@@ -1,3 +1,5 @@
+// Header component that goes transparent when you scroll down
+
 document.addEventListener("DOMContentLoaded", function () {
   let header = document.querySelector("header");
 
