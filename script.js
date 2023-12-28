@@ -1,16 +1,55 @@
-// Header component that goes transparent when you scroll down
+// Header scroll___________________________________________________________________
 
-document.addEventListener("DOMContentLoaded", function () {
-  let header = document.querySelector("header");
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("header");
 
-  window.addEventListener("scroll", function () {
-    let scroll = window.scrollY || document.documentElement.scrollTop;
-
-    // Add or remove the transparent class based on scroll position
-    if (scroll > 0) {
-      header.classList.add("header-transparent");
-    } else {
-      header.classList.remove("header-transparent");
-    }
+  window.addEventListener("scroll", () => {
+    const isScrolled = window.scrollY || document.documentElement.scrollTop > 0;
+    header.classList.toggle("header-transparent", isScrolled);
   });
 });
+
+// Slider__________________________________________________________________________
+
+const wrapper = document.querySelector(".cards-wrapper");
+const dots = document.querySelectorAll(".dot");
+const arrows = document.querySelectorAll(".arrow");
+let activeDotNum = 0;
+
+// Assign data-num and click events to dots using forEach and arrow functions
+dots.forEach((dot, idx) => {
+  dot.dataset.num = idx;
+  dot.addEventListener("click", () => navigateToSlide(idx));
+});
+
+// Assign click events to arrows using forEach and arrow functions
+arrows.forEach((arrow) => {
+  arrow.addEventListener("click", (event) =>
+    navigate(event.target.classList.contains("left") ? "left" : "right")
+  );
+});
+
+// Function to navigate to a slide with ES6 features
+const navigateToSlide = (idx) => {
+  if (idx !== activeDotNum) {
+    const displayAreaWidth = wrapper.parentElement.clientWidth;
+    wrapper.style.transform = `translateX(-${displayAreaWidth * idx}px)`;
+    dots[activeDotNum].classList.remove("active");
+    dots[idx].classList.add("active");
+    activeDotNum = idx;
+  }
+};
+
+// Function to navigate based on direction with ternary operators
+const navigate = (direction) => {
+  const totalSlides = dots.length;
+  const idx =
+    direction === "left"
+      ? activeDotNum > 0
+        ? activeDotNum - 1
+        : totalSlides - 1
+      : activeDotNum < totalSlides - 1
+      ? activeDotNum + 1
+      : 0;
+  navigateToSlide(idx);
+};
