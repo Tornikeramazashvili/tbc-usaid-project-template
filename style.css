@@ -343,14 +343,13 @@ header {
 
 .main-accordion-section {
   background-color: #161616;
-  padding-top: 70px;
+  padding: 80px 0px;
 }
 
 .main-accordion-container {
   max-width: 770px;
   width: 100%;
   margin: 0 auto;
-
 }
 
 .main-accordion-title-container {
@@ -372,7 +371,7 @@ header {
   cursor: pointer;
 }
 
-.main-accordion-all-question:hover{
+.main-accordion-all-question:hover {
   transition: 0.4s;
   color: #dbdbdb;
 }
@@ -414,12 +413,12 @@ header {
   transition: max-height 0.3s ease;
 }
 
-.accordion-content{
+.accordion-content {
   line-height: 2;
   font-size: 13px;
 }
 
-.accordion-paragraph{
+.accordion-paragraph {
   padding: 0px 20px;
 }
 
@@ -429,4 +428,64 @@ header {
 
 .active .icon {
   transform: rotate(45deg);
+}
+
+/* Footer */
+
+.footer-section {
+  background-color: #2b2b2b;
+}
+
+.footer-container {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.footer-tbc-logo {
+  width: 106px;
+}
+
+.footer-logos,
+.footer-social-links-contaner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-social-links {
+  margin-left: 10px;
+  width: 40px;
+}
+
+.footer-all-rights-reserved-container {
+  margin: 20px 0px;
+}
+
+.footer-all-rights-reserved,
+.footer-terms-and-conditions {
+  color: whitesmoke;
+  cursor: default;
+}
+
+.footer-terms-and-conditions-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-contact-btn {
+  background-color: #00aef3;
+  padding: 6px 30px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+.footer-contact-btn:hover  {
+  transition: 0.4s;
+  background-color: #D5D5D5;
+  color: black;
 }
