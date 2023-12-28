@@ -335,3 +335,98 @@ header {
 .right {
   margin-left: 10px;
 }
+
+.kuku:hover {
+  transition: 0.4s;
+  color: red;
+}
+
+.main-accordion-section {
+  background-color: #161616;
+  padding-top: 70px;
+}
+
+.main-accordion-container {
+  max-width: 770px;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+.main-accordion-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-accordion-title {
+  font-size: 21px;
+  color: whitesmoke;
+  cursor: default;
+}
+
+.main-accordion-all-question {
+  font-size: 18px;
+  font-weight: 800;
+  color: #08a3e0;
+  cursor: pointer;
+}
+
+.main-accordion-all-question:hover{
+  transition: 0.4s;
+  color: #dbdbdb;
+}
+
+/* accordion */
+
+.accordion-container {
+  width: 100%;
+  max-width: 770px;
+  margin-top: 20px;
+}
+
+.accordion-item {
+  border-bottom: 0.5px solid rgba(245, 245, 245, 0.278);
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+
+.accordion-header {
+  color: whitesmoke;
+  font-size: 16px;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+  background-color: transparent;
+}
+
+.accordion-content {
+  padding: 10px 0px 0px 0px;
+  color: whitesmoke;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-content{
+  line-height: 2;
+  font-size: 13px;
+}
+
+.accordion-paragraph{
+  padding: 0px 20px;
+}
+
+.icon {
+  transition: transform 0.3s ease;
+}
+
+.active .icon {
+  transform: rotate(45deg);
+}
