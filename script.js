@@ -54,7 +54,7 @@ const navigate = (direction) => {
   navigateToSlide(idx);
 };
 
-// Accordion____________________________________________________________
+// Accordion__________________________________________________________________________
 
 document.querySelectorAll(".accordion-header").forEach((button) => {
   button.addEventListener("click", () => {
@@ -77,3 +77,4 @@ document.querySelectorAll(".accordion-header").forEach((button) => {
     });
   });
 });
+

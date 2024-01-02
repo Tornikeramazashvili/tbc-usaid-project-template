@@ -4,7 +4,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;800&display=swap");
 
-@import url("https://font`s.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+/* @import url("https://font`s.googleapis.com/css2?family=Roboto:wght@900&display=swap"); */
 
 /* Css codes that resets default properties */
 
@@ -433,7 +433,7 @@ header {
 /* Footer */
 
 .footer-section {
-  background-color: #2b2b2b;
+  background-color: #1a1e1f;
 }
 
 .footer-container {
@@ -484,8 +484,123 @@ header {
   color: whitesmoke;
 }
 
-.footer-contact-btn:hover  {
+.footer-contact-btn:hover {
   transition: 0.4s;
-  background-color: #D5D5D5;
+  background-color: #d5d5d5;
   color: black;
+}
+
+/* Responsive */
+
+@media (width < 1024px) {
+  .main-intro-section,
+  header {
+    padding: 20px 20px;
+  }
+  body,
+  html {
+    overflow-x: hidden;
+  }
+  .main-descr-section,
+  .main-courses-section,
+  .main-slider-section {
+    padding: 0px 20px;
+  }
+  .dots-wrapper {
+    padding: 20px 0px 0px 0px;
+  }
+}
+
+@media (width < 800px) {
+  header {
+    padding: 20px 30px;
+  }
+  .main-descr-section,
+  .main-courses-section,
+  .main-slider-section {
+    padding: 0px 30px;
+  }
+  .main-accordion-section {
+    padding: 80px 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-courses-images-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 712px) {
+  .header-nav-logo-container {
+    display: none;
+  }
+  .header-nav-container {
+    margin: 0 auto;
+  }
+  .header-nav li a {
+    font-size: 18px;
+  }
+  .main-intro-section-title-container {
+    text-align: center;
+  }
+
+  .main-intro-section-title-subtitle {
+    font-size: 26px;
+    margin-top: 6px;
+  }
+  .main-descr-section-par-container,
+  .main-courses-section {
+    text-align: center;
+  }
+
+  .main-courses-section-title {
+    padding: 0px 0px 40px 0px;
+  }
+
+  .main-courses-images-container {
+    grid-template-columns: 1fr; /* Single column for small screens */
+  }
+
+  .main-courses-each-image-container {
+    width: 100%;
+  }
+
+  .main-courses-images-inner-container-title {
+    font-size: 38px;
+  }
+
+  .main-courses-images-inner-container-subtitle {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .main-courses-images-inner-container-course-details {
+    justify-content: center;
+  }
+
+  .main-courses-images-inner-container-course-details {
+    margin-top: 60px;
+  }
+
+  .course-details {
+    font-size: 20px;
+  }
+
+  .main-courses-image {
+    width: 100%;
+  }
+
+  .card {
+    flex: 212px 0 0;
+    display: flex;
+    margin: 0px 45px;
+  }
+
+  .accordion-header {
+    font-size: 18px;
+  }
+  .accordion-paragraph {
+    font-size: 16px;
+  }
 }
