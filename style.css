@@ -4,8 +4,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;800&display=swap");
 
-/* @import url("https://font`s.googleapis.com/css2?family=Roboto:wght@900&display=swap"); */
-
 /* Css codes that resets default properties */
 
 * {
@@ -96,7 +94,6 @@ header {
 }
 
 /* Main */
-/* Introduction section */
 
 .main-intro-section {
   background: url("images/intro-section-wallpaper.webp") center no-repeat;
@@ -270,8 +267,6 @@ header {
   padding: 55px 0px;
 }
 
-/* ...... */
-
 .card {
   flex: 212px 0 0;
   display: flex;
@@ -376,7 +371,7 @@ header {
   color: #dbdbdb;
 }
 
-/* accordion */
+/* Accordion */
 
 .accordion-container {
   width: 100%;
@@ -490,7 +485,7 @@ header {
   color: black;
 }
 
-/* Responsive */
+/* Media queries */
 
 @media (width < 1024px) {
   .main-intro-section,
@@ -559,7 +554,7 @@ header {
   }
 
   .main-courses-images-container {
-    grid-template-columns: 1fr; /* Single column for small screens */
+    grid-template-columns: 1fr;
   }
 
   .main-courses-each-image-container {
@@ -602,5 +597,74 @@ header {
   }
   .accordion-paragraph {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 570px) {
+  header {
+    display: none;
+  }
+  .main-intro-section-title-subtitle {
+    font-size: 32px;
+    margin-top: 10px;
+  }
+  .main-descr-section-par {
+    font-size: 21px;
+  }
+  .main-courses-images-inner-container-title {
+    font-size: 27px;
+  }
+  .main-courses-images-inner-container-course-details {
+    margin-top: 30px;
+  }
+  .main-courses-images-inner-container-course-details-python,
+  .main-courses-images-inner-container-course-details-tot,
+  .main-courses-images-inner-container-course-details-blockchain,
+  .main-courses-images-inner-container-course-details-devops {
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .card {
+    flex: 197px 0 0;
+    display: flex;
+    margin: 0px 45px;
+  }
+  .main-accordion-all-question {
+    display: none;
+  }
+  .main-accordion-title {
+    text-align: center;
+  }
+  .accordion-content {
+    font-size: 15px;
+  }
+  .footer-container {
+    text-align: center;
+  }
+  .footer-terms-and-conditions-container {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .footer-logos {
+    display: none;
+  }
+}
+
+@media (max-width: 376px) {
+  .main-descr-section-par-container {
+    display: none;
+  }
+
+  .main-intro-section-title-title {
+    font-size: 34px;
+  }
+  .main-intro-section-title-subtitle {
+    font-size: 26px;
+  }
+  .main-slider-container {
+    text-align: center;
+  }
+  .footer-container {
+    padding: 20px 10px;
   }
 }
